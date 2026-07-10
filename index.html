@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>临风佬2 | lfl2.l2.ink</title>
-<!-- 图标库，自带B站、QQ图标 -->
 <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -18,10 +17,8 @@ padding:60px 20px;
 min-height:100vh;
 color:#222;
 }
-/* 圆形头像样式 */
 .avatar{
-width:140px;
-height:140px;
+width:140px;height:140px;
 border-radius:50%;
 object-fit:cover;
 box-shadow:0 4px 12px rgba(0,0,0,0.1);
@@ -37,7 +34,6 @@ font-size:16px;
 color:#666;
 margin-bottom:35px;
 }
-/* 链接按钮容器 */
 .link-box{
 display:flex;
 gap:18px;
@@ -57,17 +53,20 @@ color:#333;
 font-size:15px;
 transition:0.2s all ease;
 }
-/* B站按钮配色 */
 .link-btn.bilibili:hover{
 background:#fb7299;
 color:#fff;
 border-color:#fb7299;
 }
-/* QQ按钮配色 */
 .link-btn.qq:hover{
 background:#12b7f5;
 color:#fff;
 border-color:#12b7f5;
+}
+.link-btn.game:hover{
+background:#6366f1;
+color:#fff;
+border-color:#6366f1;
 }
 .footer{
 margin-top:60px;
@@ -76,21 +75,21 @@ color:#999;
 }
 </style>
 </head>
-
 <body>
-<!-- 本地jpg头像 -->
 <img src="avatar.jpg" class="avatar" alt="临风佬2头像">
 <h1 class="name">临风佬2</h1>
 <p class="desc">个人主页 · lfl2.l2.ink</p>
 
 <div class="link-box">
-    <!-- B站空间链接 -->
     <a href="https://space.bilibili.com/3546597667376055" target="_blank" class="link-btn bilibili">
         <i class="fab fa-bilibili"></i> 我的B站
     </a>
-    <!-- QQ聊天按钮，点击直接唤起QQ -->
     <a href="mqqwpa://im/chat?chat_type=wpa&uin=3912324785&version=1" target="_blank" class="link-btn qq">
         <i class="fab fa-qq"></i> QQ：3912324785
+    </a>
+    <!-- 新增：2D起床战争下载按钮 -->
+    <a href="https://wwaya.lanzouv.com/iB5ua3ch7c9g" target="_blank" class="link-btn game">
+        <i class="fas fa-gamepad"></i> 2D起床战争
     </a>
 </div>
 
