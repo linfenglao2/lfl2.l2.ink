@@ -425,7 +425,7 @@
     <div class="secret-error" id="secretError"></div>
   </div>
 
-  <!-- 灰色解锁按钮区（新增 Nolstice） -->
+  <!-- 灰色解锁按钮区（新增 rise，指向同目录 rise.html） -->
   <div class="server-btn-wrap" id="serverBtnWrap">
     <a href="https://user-app-free-download-cdn.123295.com/123-254/c9bf266d/1852751571-0/c9bf266df3ca985e9693640921c7f0fe/c-m42?d_r=evann&r=64BGKR&v=5&bzs=313835323735313537313a333a313a363134393634383336&bzp=0&urn=0&d_k=8fe3d04c25719e8e8e316a4275b5b722ed14f0cf60ddad230c074b980e5ebc43&d_v=2&t=1790420297&bzc=1&bi=1354515931&ur=vvvgmnglngbi&s=1790420297b75e596c0680649f86e2dc3f907456eb&filename=%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8.zip&cache_type=2&x-mf-biz-cid=18818b3f-38d0-4504-9054-7aa63e3c474a&ndcp=1"
        target="_blank" class="server-btn">
@@ -434,6 +434,10 @@
     <a href="https://user-app-pay-download-cdn.123295.com/123-747/370a68a4/1852751571-0/370a68a4ba580bc07ed238aa7b2896eb/c-m6?v=5&d_k=8fe3d04c25719e8e8e316a4275b5b722ed14f0cf60ddad230c074b980e5ebc43&d_r=evann&d_v=2&r=U5UCOW&t=1790421329&bzc=1&bzs=313835323735313537313a333a313a32343531393933393539&bzp=0&bi=1354515931&ur=vvvgmnglngbi&urn=0&s=1790421329a29da1b8c4c2d9f6f0490423bf03cb7c&filename=Nolstice.zip&cache_type=2&x-mf-biz-cid=a1c81008-013f-449e-87fa-a782308593f2&ndcp=1"
        target="_blank" class="server-btn">
       <i class="fas fa-moon" aria-hidden="true"></i> Nolstice
+    </a>
+    <!-- 新增 rise，指向同目录 rise.html，相对路径 -->
+    <a href="rise.html" target="_blank" class="server-btn">
+      <i class="fas fa-arrow-up" aria-hidden="true"></i> rise
     </a>
   </div>
 
@@ -457,44 +461,4 @@
         if (serverBtnWrap.classList.contains('show')) return;
         panel.classList.toggle('show');
         if (panel.classList.contains('show')) {
-          input.focus();
-          errorEl.textContent = '';
-        }
-      });
-
-      function checkPassword() {
-        const pwd = input.value.trim();
-        if (pwd === '114514') {
-          errorEl.textContent = '';
-          panel.classList.remove('show');
-          serverBtnWrap.classList.add('show');
-          trigger.style.display = 'none';
-          input.value = '';
-        } else {
-          errorEl.textContent = '密码错误，请重试';
-          input.value = '';
-          input.focus();
-        }
-      }
-
-      submit.addEventListener('click', checkPassword);
-      input.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          checkPassword();
-        }
-      });
-
-      document.addEventListener('click', function(e) {
-        if (panel.classList.contains('show')) {
-          const isClickInside = panel.contains(e.target) || trigger.contains(e.target);
-          if (!isClickInside) {
-            panel.classList.remove('show');
-            errorEl.textContent = '';
-          }
-        }
-      });
-    })();
-  </script>
-</body>
-</html>
+          input.f
