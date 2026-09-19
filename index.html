@@ -217,13 +217,15 @@
       text-align: center;
     }
 
-    /* ========== 灰色解锁按钮 ========== */
+    /* ========== 灰色解锁按钮区 ========== */
     .server-btn-wrap {
       display: none;
       margin-top: 20px;
       width: 100%;
       max-width: 280px;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
 
     .server-btn-wrap.show {
@@ -423,11 +425,15 @@
     <div class="secret-error" id="secretError"></div>
   </div>
 
-  <!-- 灰色服务器按钮 -->
+  <!-- 灰色解锁按钮区（新增 Nolstice） -->
   <div class="server-btn-wrap" id="serverBtnWrap">
     <a href="https://user-app-free-download-cdn.123295.com/123-254/c9bf266d/1852751571-0/c9bf266df3ca985e9693640921c7f0fe/c-m42?d_r=evann&r=64BGKR&v=5&bzs=313835323735313537313a333a313a363134393634383336&bzp=0&urn=0&d_k=8fe3d04c25719e8e8e316a4275b5b722ed14f0cf60ddad230c074b980e5ebc43&d_v=2&t=1790420297&bzc=1&bi=1354515931&ur=vvvgmnglngbi&s=1790420297b75e596c0680649f86e2dc3f907456eb&filename=%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8.zip&cache_type=2&x-mf-biz-cid=18818b3f-38d0-4504-9054-7aa63e3c474a&ndcp=1"
        target="_blank" class="server-btn">
       <i class="fas fa-server" aria-hidden="true"></i> 网页服务器
+    </a>
+    <a href="https://user-app-pay-download-cdn.123295.com/123-747/370a68a4/1852751571-0/370a68a4ba580bc07ed238aa7b2896eb/c-m6?v=5&d_k=8fe3d04c25719e8e8e316a4275b5b722ed14f0cf60ddad230c074b980e5ebc43&d_r=evann&d_v=2&r=U5UCOW&t=1790421329&bzc=1&bzs=313835323735313537313a333a313a32343531393933393539&bzp=0&bi=1354515931&ur=vvvgmnglngbi&urn=0&s=1790421329a29da1b8c4c2d9f6f0490423bf03cb7c&filename=Nolstice.zip&cache_type=2&x-mf-biz-cid=a1c81008-013f-449e-87fa-a782308593f2&ndcp=1"
+       target="_blank" class="server-btn">
+      <i class="fas fa-moon" aria-hidden="true"></i> Nolstice
     </a>
   </div>
 
