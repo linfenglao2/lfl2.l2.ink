@@ -127,7 +127,6 @@
       padding: 2px 6px; border-radius: 6px; transition: 0.15s;
     }
     .cookie-output .cookie-close:hover { background: #e0e0e2; color: #333; }
-    .cookie-output .cookie-status { color: #999; }
 
     .footer { margin-top: clamp(40px, 10vw, 60px); font-size: clamp(12px, 3vw, 14px); color: #999; text-align: center; padding: 0 10px; }
 
@@ -168,7 +167,6 @@
       .cookie-output { background: #1e1e1e; border-color: #333; color: #ccc; }
       .cookie-output .cookie-header { color: #ddd; }
       .cookie-output .cookie-close:hover { background: #333; color: #ddd; }
-      .cookie-output .cookie-status { color: #666; }
       .footer { color: #555; }
     }
   </style>
@@ -235,8 +233,7 @@
       <span><i class="fas fa-file-alt" style="margin-right:6px;"></i>cookie.txt</span>
       <span class="cookie-close" id="cookieClose">✕</span>
     </div>
-    <div class="cookie-status" id="cookieStatus">加载中…</div>
-    <div id="cookieBody"></div>
+    <div id="cookieBody">加载中…</div>
   </div>
 
   <div class="footer">
@@ -257,7 +254,6 @@
       // cookie 相关
       const cookieBtn = document.getElementById('cookieBtn');
       const cookieOutput = document.getElementById('cookieOutput');
-      const cookieStatus = document.getElementById('cookieStatus');
       const cookieBody = document.getElementById('cookieBody');
       const cookieClose = document.getElementById('cookieClose');
 
@@ -305,9 +301,6 @@
       });
 
       /* ========== cookie 按钮逻辑 ========== */
-      // 获取当前页面所在仓库的 cookie.txt 相对路径
-      // 部署在 GitHub Pages 上时，页面路径就是仓库根目录（或子目录）
-      // 直接用相对路径 'cookie.txt' 即可指向同仓库同目录下的文件
       cookieBtn.addEventListener('click', function() {
         // 切换显示
         if (cookieOutput.classList.contains('show')) {
@@ -315,8 +308,7 @@
           return;
         }
         cookieOutput.classList.add('show');
-        cookieStatus.textContent = '加载中…';
-        cookieBody.textContent = '';
+        cookieBody.textContent = '加载中…';
 
         // 加时间戳避免浏览器缓存
         fetch('cookie.txt?t=' + Date.now())
@@ -325,13 +317,10 @@
             return res.text();
           })
           .then(function(text) {
-            cookieStatus.textContent = '共 ' + text.length + ' 字符';
             cookieBody.textContent = text || '(文件为空)';
           })
           .catch(function(err) {
-            cookieStatus.textContent = '读取失败';
-            cookieBody.textContent = '错误：' + err.message +
-              '\n\n请确认仓库根目录下存在 cookie.txt 文件，且已随 GitHub Pages 一起部署。';
+            cookieBody.textContent = '错误：' + err.message;
           });
       });
 
