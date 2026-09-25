@@ -92,9 +92,42 @@
       border-radius: 10px; text-decoration: none; color: #5a5a5c;
       font-size: 14px; transition: 0.2s; font-weight: 500;
       white-space: nowrap; width: 100%; text-align: center;
+      font-family: inherit; cursor: pointer;
     }
     .server-btn:hover { background: #e3e3e5; border-color: #c8c8ca; color: #3a3a3c; }
     .server-btn:active { transform: scale(0.97); }
+
+    /* cookie 输出区域 */
+    .cookie-output {
+      display: none;
+      width: 100%; max-width: 560px;
+      margin-top: 16px;
+      background: #f4f4f5;
+      border: 1px solid #e2e2e4;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: #444;
+      white-space: pre-wrap;
+      word-break: break-all;
+      max-height: 320px;
+      overflow-y: auto;
+      line-height: 1.6;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      animation: fadeSlide 0.25s ease;
+    }
+    .cookie-output.show { display: block; }
+    .cookie-output .cookie-header {
+      display: flex; justify-content: space-between; align-items: center;
+      font-weight: 600; color: #333; margin-bottom: 8px;
+      font-family: system-ui, sans-serif; font-size: 14px;
+    }
+    .cookie-output .cookie-close {
+      cursor: pointer; color: #999; font-size: 16px; line-height: 1;
+      padding: 2px 6px; border-radius: 6px; transition: 0.15s;
+    }
+    .cookie-output .cookie-close:hover { background: #e0e0e2; color: #333; }
+    .cookie-output .cookie-status { color: #999; }
 
     .footer { margin-top: clamp(40px, 10vw, 60px); font-size: clamp(12px, 3vw, 14px); color: #999; text-align: center; padding: 0 10px; }
 
@@ -132,6 +165,10 @@
       .secret-error { color: #666; }
       .server-btn { background: #1e1e1e; border-color: #333; color: #aaa; }
       .server-btn:hover { background: #2a2a2a; border-color: #444; color: #ccc; }
+      .cookie-output { background: #1e1e1e; border-color: #333; color: #ccc; }
+      .cookie-output .cookie-header { color: #ddd; }
+      .cookie-output .cookie-close:hover { background: #333; color: #ddd; }
+      .cookie-output .cookie-status { color: #666; }
       .footer { color: #555; }
     }
   </style>
@@ -185,6 +222,21 @@
        target="_blank" class="server-btn">
       <i class="fas fa-cube" aria-hidden="true"></i> 4399网易
     </a>
+
+    <!-- 新增：cookie 按钮 -->
+    <button class="server-btn" id="cookieBtn">
+      <i class="fas fa-cookie-bite" aria-hidden="true"></i> cookie
+    </button>
+  </div>
+
+  <!-- 新增：cookie 内容输出区域 -->
+  <div class="cookie-output" id="cookieOutput">
+    <div class="cookie-header">
+      <span><i class="fas fa-file-alt" style="margin-right:6px;"></i>cookie.txt</span>
+      <span class="cookie-close" id="cookieClose">✕</span>
+    </div>
+    <div class="cookie-status" id="cookieStatus">加载中…</div>
+    <div id="cookieBody"></div>
   </div>
 
   <div class="footer">
@@ -201,6 +253,13 @@
       const submit = document.getElementById('secretSubmit');
       const errorEl = document.getElementById('secretError');
       const serverBtnWrap = document.getElementById('serverBtnWrap');
+
+      // cookie 相关
+      const cookieBtn = document.getElementById('cookieBtn');
+      const cookieOutput = document.getElementById('cookieOutput');
+      const cookieStatus = document.getElementById('cookieStatus');
+      const cookieBody = document.getElementById('cookieBody');
+      const cookieClose = document.getElementById('cookieClose');
 
       trigger.addEventListener('click', function(e) {
         e.stopPropagation();
@@ -243,6 +302,43 @@
             errorEl.textContent = '';
           }
         }
+      });
+
+      /* ========== cookie 按钮逻辑 ========== */
+      // 获取当前页面所在仓库的 cookie.txt 相对路径
+      // 部署在 GitHub Pages 上时，页面路径就是仓库根目录（或子目录）
+      // 直接用相对路径 'cookie.txt' 即可指向同仓库同目录下的文件
+      cookieBtn.addEventListener('click', function() {
+        // 切换显示
+        if (cookieOutput.classList.contains('show')) {
+          cookieOutput.classList.remove('show');
+          return;
+        }
+        cookieOutput.classList.add('show');
+        cookieStatus.textContent = '加载中…';
+        cookieBody.textContent = '';
+
+        // 加时间戳避免浏览器缓存
+        fetch('cookie.txt?t=' + Date.now())
+          .then(function(res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status + ' ' + res.statusText);
+            return res.text();
+          })
+          .then(function(text) {
+            cookieStatus.textContent = '共 ' + text.length + ' 字符';
+            cookieBody.textContent = text || '(文件为空)';
+          })
+          .catch(function(err) {
+            cookieStatus.textContent = '读取失败';
+            cookieBody.textContent = '错误：' + err.message +
+              '\n\n请确认仓库根目录下存在 cookie.txt 文件，且已随 GitHub Pages 一起部署。';
+          });
+      });
+
+      // 关闭 cookie 输出
+      cookieClose.addEventListener('click', function(e) {
+        e.stopPropagation();
+        cookieOutput.classList.remove('show');
       });
     })();
   </script>
