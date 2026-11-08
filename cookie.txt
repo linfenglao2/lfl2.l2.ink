@@ -45,3 +45,24 @@
 {"sauth_json":"{\"aim_info\":\"{\\\"aim\\\":\\\"127.0.0.1\\\",\\\"country\\\":\\\"CN\\\",\\\"tz\\\":\\\"+0800\\\",\\\"tzid\\\":\\\"\\\"}\",\"realname\":\"{\\\"realname_type\\\":2}\",\"gameid\":\"x19\",\"app_channel\":\"4399com\",\"login_channel\":\"4399com\",\"platform\":\"ad\",\"sdk_version\":\"3.12.2\",\"sdkuid\":\"1397803108\",\"sessionid\":\"1397803108|ac20e46ac31b10960eeb52aee7e575a7|44770||cbd7fa1aab7bf12fd02f86862439e034|9c5f2a63d26b482baa54e1952b968b0d|1794753707|4399\",\"udid\":\"523114249b23d02d\",\"client_login_sn\":\"e8c7cd200448c520\",\"deviceid\":\"10911278d8b4739e\"}"}
 
 {"sauth_json":"{\"aim_info\":\"{\\\"aim\\\":\\\"127.0.0.1\\\",\\\"country\\\":\\\"CN\\\",\\\"tz\\\":\\\"+0800\\\",\\\"tzid\\\":\\\"\\\"}\",\"realname\":\"{\\\"realname_type\\\":2}\",\"gameid\":\"x19\",\"app_channel\":\"4399com\",\"login_channel\":\"4399com\",\"platform\":\"ad\",\"sdk_version\":\"3.12.2\",\"sdkuid\":\"1397803039\",\"sessionid\":\"1397803039|4abccfd3f8c1f8e9e34d961d0f85c9b3|44770||1b99af970131daea27f41a69592c2a30|06efb5fa7dafadc0dde3557573e067c9|1794753719|4399\",\"udid\":\"4e06ba652d82acda\",\"client_login_sn\":\"12b605e74bce6145\",\"deviceid\":\"5003ca52deec1abb\"}"}
+
+11.8
+账号: 2ljfy7ok
+密码: Neko719330
+{"sauth_json":"{\"aim_info\":\"{\\\"aim\\\":\\\"127.0.0.1\\\",\\\"country\\\":\\\"CN\\\",\\\"tz\\\":\\\"+0800\\\",\\\"tzid\\\":\\\"\\\"}\",\"realname\":\"{\\\"realname_type\\\":2}\",\"gameid\":\"x19\",\"app_channel\":\"4399com\",\"login_channel\":\"4399com\",\"platform\":\"ad\",\"sdk_version\":\"3.12.2\",\"sdkuid\":\"1397873774\",\"sessionid\":\"1397873774|b067a827ee06a1c21fad7df5dc27b498|44770||4bdfbebcc27d1d2ca852f126825001e0|891173bf0d048f151b221c140d51856d|1795442166|4399\",\"udid\":\"d3947b4801ee1832\",\"client_login_sn\":\"aa43bbcd1ad24a02\",\"deviceid\":\"3969e989e7c5180a\"}"}
+
+账号: if0bvpn7
+密码: Neko703616
+{"sauth_json":"{\"aim_info\":\"{\\\"aim\\\":\\\"127.0.0.1\\\",\\\"country\\\":\\\"CN\\\",\\\"tz\\\":\\\"+0800\\\",\\\"tzid\\\":\\\"\\\"}\",\"realname\":\"{\\\"realname_type\\\":2}\",\"gameid\":\"x19\",\"app_channel\":\"4399com\",\"login_channel\":\"4399com\",\"platform\":\"ad\",\"sdk_version\":\"3.12.2\",\"sdkuid\":\"1397873788\",\"sessionid\":\"1397873788|c874b5f072d767bde32a77b8cb8c7e50|44770||1c367888d8a1895c60126c11b51d24b1|e4fdf828f2655ceff218488863da360f|1795442176|4399\",\"udid\":\"785e84bc10b4ed1b\",\"client_login_sn\":\"07b5d7c6d3b15794\",\"deviceid\":\"6a27e8a833246cbb\"}"}
+
+账号: 0soszlil
+密码: Neko492845
+{"sauth_json":"{\"aim_info\":\"{\\\"aim\\\":\\\"127.0.0.1\\\",\\\"country\\\":\\\"CN\\\",\\\"tz\\\":\\\"+0800\\\",\\\"tzid\\\":\\\"\\\"}\",\"realname\":\"{\\\"realname_type\\\":2}\",\"gameid\":\"x19\",\"app_channel\":\"4399com\",\"login_channel\":\"4399com\",\"platform\":\"ad\",\"sdk_version\":\"3.12.2\",\"sdkuid\":\"1397873787\",\"sessionid\":\"1397873787|3597b561702d15f903cec9ce290d84bb|44770||e9564c96385bc51dffe9fd8214285d0d|e321b8e73aa5f68d62dcd3ce1034bb6e|1795442183|4399\",\"udid\":\"3be4ebb788010bdb\",\"client_login_sn\":\"d3e71b0ac1895294\",\"deviceid\":\"6243b560e09b1405\"}"}
+
+账号: gcumipuz
+密码: Neko936543
+{"sauth_json":"{\"aim_info\":\"{\\\"aim\\\":\\\"127.0.0.1\\\",\\\"country\\\":\\\"CN\\\",\\\"tz\\\":\\\"+0800\\\",\\\"tzid\\\":\\\"\\\"}\",\"realname\":\"{\\\"realname_type\\\":2}\",\"gameid\":\"x19\",\"app_channel\":\"4399com\",\"login_channel\":\"4399com\",\"platform\":\"ad\",\"sdk_version\":\"3.12.2\",\"sdkuid\":\"1397873832\",\"sessionid\":\"1397873832|17d3fe6836a17118b6fb0a1616b71e08|44770||9c5ea03c56b10ba39aa6f6e743e54640|fed70de50a0581f77537d8a52a9f279d|1795442189|4399\",\"udid\":\"222a7809a3243dec\",\"client_login_sn\":\"e15de452e3bbba01\",\"deviceid\":\"77d0a86135a3daa1\"}"}
+
+账号: knahavrq
+密码: Neko005818
+{"sauth_json":"{\"aim_info\":\"{\\\"aim\\\":\\\"127.0.0.1\\\",\\\"country\\\":\\\"CN\\\",\\\"tz\\\":\\\"+0800\\\",\\\"tzid\\\":\\\"\\\"}\",\"realname\":\"{\\\"realname_type\\\":2}\",\"gameid\":\"x19\",\"app_channel\":\"4399com\",\"login_channel\":\"4399com\",\"platform\":\"ad\",\"sdk_version\":\"3.12.2\",\"sdkuid\":\"1397873808\",\"sessionid\":\"1397873808|5227385ed339c2bc4ff8730ab5b6750f|44770||a7dc0fd83ed4e1ee374d6317958029fa|e9b108a7072292d40c9a8f7bc0070be0|1795442195|4399\",\"udid\":\"5c8b5ab0c45c0325\",\"client_login_sn\":\"b0e7b4e7bc878d9c\",\"deviceid\":\"8138cd1782cecdb4\"}"}
